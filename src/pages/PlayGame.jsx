@@ -12,7 +12,7 @@ function PlayGame() {
     const savedGames = localStorage.getItem('gameverse_games')
     if (savedGames) {
       const parsed = JSON.parse(savedGames)
-      const foundGame = parsed.find(g => g.Md5 === id)
+      const foundGame = parsed.find(g => g.id === id)
       if (foundGame) {
         setGame(foundGame)
         return
@@ -53,7 +53,7 @@ function PlayGame() {
           </Link>
           <div style={{ width: '1px', height: '24px', background: 'rgba(74, 140, 199, 0.2)' }} />
           <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 700, color: 'white' }}>
-            {game.Title}
+            {game.title}
           </h1>
         </div>
 
@@ -66,8 +66,8 @@ function PlayGame() {
       <div style={{ flex: 1, position: 'relative', background: '#000' }}>
         <iframe
           ref={iframeRef}
-          src={game.Url}
-          title={game.Title}
+          src={game.url}
+          title={game.title}
           style={{ width: '100%', height: '100%', border: 'none' }}
           allow="autoplay; fullscreen; microphone"
         />

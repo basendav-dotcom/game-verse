@@ -8,11 +8,42 @@ function Home() {
   useEffect(() => {
     async function fetchGames() {
       try {
-        const res = await fetch('https://catalog.api.gamedistribution.com/api/v2.0/rss/All/?collection=all&categories=All&tags=All&subType=all&type=all&mobile=all&rewarded=all&amount=45&page=1&format=json')
-        const data = await res.json()
-        setGames(data)
+        const [pgRes, gdRes] = await Promise.all([
+          fetch(import.meta.env.BASE_URL + 'games.json'),
+          fetch('https://catalog.api.gamedistribution.com/api/v2.0/rss/All/?collection=all&categories=All&tags=All&subType=all&type=all&mobile=all&rewarded=all&amount=45&page=1&format=json')
+        ])
+        
+        const pgData = await pgRes.json()
+        const gdData = await gdRes.json()
+        
+        // Extract and normalize Playgama games
+        const pgGames = pgData.segments ? pgData.segments.flatMap(segment => segment.hits || []) : []
+        const normalizedPgGames = pgGames.slice(0, 45).map(g => ({
+          id: g.id,
+          title: g.title,
+          image: g.images && g.images.length > 0 ? g.images[0] : 'https://via.placeholder.com/512x512?text=Game',
+          url: g.gameURL
+        }))
+        
+        // Extract and normalize GameDistribution games
+        const normalizedGdGames = gdData.map(g => ({
+          id: g.Md5,
+          title: g.Title,
+          image: g.Asset && g.Asset.length > 0 ? (g.Asset.find(a => a.includes('512x512')) || g.Asset[0]) : 'https://via.placeholder.com/512x512?text=Game',
+          url: g.Url
+        }))
+
+        // Combine and interleave them
+        const displayGames = []
+        const maxLength = Math.max(normalizedPgGames.length, normalizedGdGames.length)
+        for (let i = 0; i < maxLength; i++) {
+          if (normalizedPgGames[i]) displayGames.push(normalizedPgGames[i])
+          if (normalizedGdGames[i]) displayGames.push(normalizedGdGames[i])
+        }
+        
+        setGames(displayGames)
         // Store games in localStorage so the Play page can access the URL and details
-        localStorage.setItem('gameverse_games', JSON.stringify(data))
+        localStorage.setItem('gameverse_games', JSON.stringify(displayGames))
       } catch (err) {
         console.error('Failed to fetch games:', err)
       } finally {
@@ -54,7 +85,7 @@ function Home() {
       ) : (
         <div className="game-grid">
           {games.map((game, i) => (
-            <GameTile key={game.Md5} game={game} spanClass={getSpanClass(i)} />
+            <GameTile key={game.id} game={game} spanClass={getSpanClass(i)} />
           ))}
         </div>
       )}
