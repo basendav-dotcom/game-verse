@@ -4,6 +4,7 @@ import GameTile from '../components/GameTile'
 function Home() {
   const [games, setGames] = useState([])
   const [loading, setLoading] = useState(true)
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
     async function fetchGames() {
@@ -74,9 +75,23 @@ function Home() {
         <h1 className="gradient-text" style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 900, marginBottom: '8px' }}>
           Play Free Online Games
         </h1>
-        <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+        <p style={{ color: '#94a3b8', fontSize: '1.1rem', marginBottom: '24px' }}>
           Discover the best free HTML5 games right in your browser.
         </p>
+
+        <div className="search-container">
+          <input 
+            type="text" 
+            className="search-input" 
+            placeholder="Search games..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <svg className="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
       </div>
 
       {/* Grid */}
@@ -84,7 +99,9 @@ function Home() {
         <div className="spinner" />
       ) : (
         <div className="game-grid">
-          {games.map((game, i) => (
+          {games
+            .filter(game => game.title.toLowerCase().includes(searchQuery.toLowerCase()))
+            .map((game, i) => (
             <GameTile key={game.id} game={game} spanClass={getSpanClass(i)} />
           ))}
         </div>
