@@ -22,8 +22,8 @@
           "title": "DTA 6",
           "description": "An open-world action sandbox game inspired by the GTA series, featuring low-poly or voxel-style graphics.",
           "howToPlayText": "WASD to move, E to interact, Mouse to aim/shoot.",
-          "gameURL": "https://playhop.com/game/dta-6",
-          "playgamaGameUrl": "https://playhop.com/game/dta-6",
+          "gameURL": "https://playgama.com/export/game/dta-6?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "playgamaGameUrl": "https://playgama.com/game/dta-6",
           "genres": [
             "action",
             "sandbox",
@@ -35,7 +35,7 @@
             "gta"
           ],
           "images": [
-            "https://via.placeholder.com/448"
+            "/thumbnails/dta-6.jpg"
           ],
           "videos": [],
           "mobileReady": [
@@ -53,7 +53,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playhop.com/game/dta-6' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://playgama.com/export/game/dta-6?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "playhop-bodycam",
@@ -61,8 +61,8 @@
           "title": "Body Cam Shooter",
           "description": "HeadOn - Body Cam Shooter Game. Intense first-person shooter with a realistic body cam perspective.",
           "howToPlayText": "WASD to move, Mouse to aim and shoot.",
-          "gameURL": "https://playhop.com/game/body-cam-shooter",
-          "playgamaGameUrl": "https://playhop.com/game/body-cam-shooter",
+          "gameURL": "https://playgama.com/export/game/headon?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "playgamaGameUrl": "https://playgama.com/game/headon",
           "genres": [
             "shooter",
             "action"
@@ -73,7 +73,7 @@
             "realistic"
           ],
           "images": [
-            "https://via.placeholder.com/448"
+            "/thumbnails/bodycam.jpg"
           ],
           "videos": [],
           "mobileReady": [
@@ -91,7 +91,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playhop.com/game/body-cam-shooter' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://playgama.com/export/game/headon?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "playhop-trafficrace",
@@ -99,8 +99,8 @@
           "title": "Traffic Race Online",
           "description": "Race through highway traffic and earn cash to upgrade your cars and buy new ones.",
           "howToPlayText": "Use Arrow keys or WASD to steer.",
-          "gameURL": "https://playhop.com/game/traffic-race-online",
-          "playgamaGameUrl": "https://playhop.com/game/traffic-race-online",
+          "gameURL": "https://playgama.com/export/game/traffic-race-online?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "playgamaGameUrl": "https://playgama.com/game/traffic-race-online",
           "genres": [
             "racing",
             "driving"
@@ -111,7 +111,7 @@
             "racing"
           ],
           "images": [
-            "https://via.placeholder.com/448"
+            "/thumbnails/traffic.jpg"
           ],
           "videos": [],
           "mobileReady": [
@@ -130,7 +130,7 @@
             "horizontal": false,
             "vertical": true
           },
-          "embed": "<iframe src='https://playhop.com/game/traffic-race-online' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://playgama.com/export/game/traffic-race-online?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "playhop-backrooms",
@@ -138,8 +138,8 @@
           "title": "Exit the Backrooms: Level 0",
           "description": "Trapped within an endless, decaying office labyrinth. Locate and collect ten hidden valves scattered throughout the maze to activate the exit.",
           "howToPlayText": "WASD to move, Shift to sprint, E to interact.",
-          "gameURL": "https://playhop.com/game/exit-the-backrooms-level-0",
-          "playgamaGameUrl": "https://playhop.com/game/exit-the-backrooms-level-0",
+          "gameURL": "https://playgama.com/export/game/exit-the-backrooms-level-0?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "playgamaGameUrl": "https://playgama.com/game/exit-the-backrooms-level-0",
           "genres": [
             "horror",
             "adventure"
@@ -150,7 +150,7 @@
             "survival"
           ],
           "images": [
-            "https://via.placeholder.com/448"
+            "/thumbnails/backrooms.jpg"
           ],
           "videos": [],
           "mobileReady": [
@@ -168,7 +168,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playhop.com/game/exit-the-backrooms-level-0' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://playgama.com/export/game/exit-the-backrooms-level-0?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "playhop-sweetparkour",
@@ -176,8 +176,8 @@
           "title": "Sweet Parkour: Faster with Every Step +67",
           "description": "A candy course filled with platforms made of sweets. Sprint across these platforms while your velocity continuously increases.",
           "howToPlayText": "Use movement keys to jump and navigate.",
-          "gameURL": "https://playhop.com/game/sweet-parkour-faster",
-          "playgamaGameUrl": "https://playhop.com/game/sweet-parkour-faster",
+          "gameURL": "https://playgama.com/export/game/sweet-parkour-faster?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "playgamaGameUrl": "https://playgama.com/game/sweet-parkour-faster",
           "genres": [
             "arcade",
             "parkour"
@@ -188,7 +188,7 @@
             "speed"
           ],
           "images": [
-            "https://via.placeholder.com/448"
+            "/thumbnails/parkour.jpg"
           ],
           "videos": [],
           "mobileReady": [
@@ -206,7 +206,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playhop.com/game/sweet-parkour-faster' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://playgama.com/export/game/sweet-parkour-faster?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "97426",
