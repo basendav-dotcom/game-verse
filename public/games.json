@@ -61,7 +61,7 @@
           "title": "Body Cam Shooter",
           "description": "HeadOn - Body Cam Shooter Game. Intense first-person shooter with a realistic body cam perspective.",
           "howToPlayText": "WASD to move, Mouse to aim and shoot.",
-          "gameURL": "https://playgama.com/export/game/headon?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "gameURL": "https://html5.gamedistribution.com/5f7d3d2999cc472ba56c07abff6506d1/",
           "playgamaGameUrl": "https://playgama.com/game/headon",
           "genres": [
             "shooter",
@@ -91,7 +91,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playgama.com/export/game/headon?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://html5.gamedistribution.com/5f7d3d2999cc472ba56c07abff6506d1/' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "playhop-trafficrace",
@@ -138,7 +138,7 @@
           "title": "Exit the Backrooms: Level 0",
           "description": "Trapped within an endless, decaying office labyrinth. Locate and collect ten hidden valves scattered throughout the maze to activate the exit.",
           "howToPlayText": "WASD to move, Shift to sprint, E to interact.",
-          "gameURL": "https://playgama.com/export/game/exit-the-backrooms-level-0?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "gameURL": "https://html5.gamedistribution.com/16183d2a704e460098f044bb7bb98b83/",
           "playgamaGameUrl": "https://playgama.com/game/exit-the-backrooms-level-0",
           "genres": [
             "horror",
@@ -168,7 +168,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playgama.com/export/game/exit-the-backrooms-level-0?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://html5.gamedistribution.com/16183d2a704e460098f044bb7bb98b83/' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "playhop-sweetparkour",
@@ -176,7 +176,7 @@
           "title": "Sweet Parkour: Faster with Every Step +67",
           "description": "A candy course filled with platforms made of sweets. Sprint across these platforms while your velocity continuously increases.",
           "howToPlayText": "Use movement keys to jump and navigate.",
-          "gameURL": "https://playgama.com/export/game/sweet-parkour-faster?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7",
+          "gameURL": "https://html5.gamedistribution.com/712361b7f03541bdac7b57da4bf06fb3/",
           "playgamaGameUrl": "https://playgama.com/game/sweet-parkour-faster",
           "genres": [
             "arcade",
@@ -206,7 +206,7 @@
             "horizontal": true,
             "vertical": false
           },
-          "embed": "<iframe src='https://playgama.com/export/game/sweet-parkour-faster?clid=p_606e672d-cab4-4d7f-8651-e636430c27e7' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
+          "embed": "<iframe src='https://html5.gamedistribution.com/712361b7f03541bdac7b57da4bf06fb3/' allow='fullscreen; autoplay' frameborder='0' width='800' height='450'></iframe>"
         },
         {
           "id": "97426",

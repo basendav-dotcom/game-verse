@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import GameTile from '../components/GameTile'
+import { localGames } from '../data/localGames'
 
 function Home() {
   const [games, setGames] = useState([])
@@ -9,13 +10,13 @@ function Home() {
   useEffect(() => {
     async function fetchGames() {
       try {
-        const [pgRes, gdRes] = await Promise.all([
-          fetch(import.meta.env.BASE_URL + 'games.json'),
+        const [pgResult, gdResult] = await Promise.allSettled([
+          fetch(import.meta.env.BASE_URL + 'games.json?v=' + Date.now()),
           fetch('https://catalog.api.gamedistribution.com/api/v2.0/rss/All/?collection=all&categories=All&tags=All&subType=all&type=all&mobile=all&rewarded=all&amount=45&page=1&format=json')
         ])
-        
-        const pgData = await pgRes.json()
-        const gdData = await gdRes.json()
+
+        const pgData = pgResult.status === 'fulfilled' && pgResult.value.ok ? await pgResult.value.json() : {}
+        const gdData = gdResult.status === 'fulfilled' && gdResult.value.ok ? await gdResult.value.json() : []
         
         // Extract and normalize Playgama games
         const pgGames = pgData.segments ? pgData.segments.flatMap(segment => segment.hits || []) : []
@@ -35,7 +36,7 @@ function Home() {
         }))
 
         // Combine and interleave them
-        const displayGames = []
+        const displayGames = [...localGames]
         const maxLength = Math.max(normalizedPgGames.length, normalizedGdGames.length)
         for (let i = 0; i < maxLength; i++) {
           if (normalizedPgGames[i]) displayGames.push(normalizedPgGames[i])

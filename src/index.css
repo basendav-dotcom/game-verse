@@ -243,6 +243,77 @@ body {
   min-height: 100vh;
 }
 
+/* ─── Informational Pages ─── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 9999px;
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--color-cyan-300);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.info-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+
+.info-page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.info-page-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin: 16px 0 12px;
+}
+
+.info-page-header p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.info-page-card {
+  padding: clamp(24px, 5vw, 40px);
+}
+
+.info-page-content {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.info-page-content p {
+  margin-bottom: 20px;
+}
+
+.info-page-content p:last-child {
+  margin-bottom: 0;
+}
+
+.info-page-content h2 {
+  color: #e2e8f0;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 32px 0 12px;
+}
+
+.info-page-content a {
+  color: var(--color-cyan-300);
+  text-underline-offset: 3px;
+}
+
+.info-page-content a:hover {
+  color: var(--color-blue-300);
+}
+
 /* ─── Search Bar ─── */
 .search-container {
   position: relative;

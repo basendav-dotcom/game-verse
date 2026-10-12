@@ -1,5 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
+import LocalGame from '../components/LocalGame'
+import { localGames } from '../data/localGames'
 
 function PlayGame() {
   const { id } = useParams()
@@ -8,6 +10,11 @@ function PlayGame() {
   const iframeRef = useRef(null)
 
   useEffect(() => {
+    const localGame = localGames.find(item => item.id === id)
+    if (localGame) {
+      setGame(localGame)
+      return
+    }
     // Retrieve game data from localStorage
     const savedGames = localStorage.getItem('gameverse_games')
     if (savedGames) {
@@ -64,13 +71,17 @@ function PlayGame() {
 
       {/* Game Iframe Container */}
       <div style={{ flex: 1, position: 'relative', background: '#000' }}>
-        <iframe
-          ref={iframeRef}
-          src={game.url}
-          title={game.title}
-          style={{ width: '100%', height: '100%', border: 'none' }}
-          allow="autoplay; fullscreen; microphone"
-        />
+        {game.type ? (
+          <LocalGame type={game.type} />
+        ) : (
+          <iframe
+            ref={iframeRef}
+            src={game.url}
+            title={game.title}
+            style={{ width: '100%', height: '100%', border: 'none' }}
+            allow="autoplay; fullscreen; microphone"
+          />
+        )}
       </div>
 
     </div>

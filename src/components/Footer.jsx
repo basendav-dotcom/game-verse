@@ -48,6 +48,35 @@ function Footer() {
             {[
               { to: '/', label: 'Home (All Games)' },
               { to: '/about', label: 'About' },
+              { to: '/contact', label: 'Contact' },
+            ].map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}
+                onMouseEnter={e => e.target.style.color = 'var(--color-cyan-300)'}
+                onMouseLeave={e => e.target.style.color = '#64748b'}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h4 style={{
+            fontFamily: 'var(--font-heading)',
+            fontWeight: 700,
+            fontSize: '1rem',
+            color: '#e2e8f0',
+            marginBottom: '16px',
+          }}>
+            Policies
+          </h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {[
+              { to: '/privacy', label: 'Privacy Policy' },
+              { to: '/terms', label: 'Terms of Use' },
             ].map(link => (
               <Link
                 key={link.to}
