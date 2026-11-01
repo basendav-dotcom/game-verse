@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import MonsterMaze from './MonsterMaze'
+import ExtraGames from './ExtraGames'
 
 const gameShell = {
   minHeight: '100%',
@@ -144,7 +146,9 @@ function OrbitTap() {
 function LocalGame({ type }) {
   if (type === 'neon-dodge') return <NeonDodge />
   if (type === 'memory-match') return <MemoryMatch />
-  return <OrbitTap />
+  if (type === 'yellow-halls') return <MonsterMaze />
+  if (type === 'orbit-tap') return <OrbitTap />
+  return <ExtraGames type={type} />
 }
 
 export default LocalGame

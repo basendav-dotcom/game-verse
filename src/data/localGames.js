@@ -1,9 +1,92 @@
+import monsterMazeArtwork from '../assets/images/monster_black_animation.webp'
+
 const createArtwork = (title, accent, emoji) => {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08111f"/><stop offset="1" stop-color="#172b45"/></linearGradient></defs><rect width="800" height="600" fill="url(#bg)"/><circle cx="670" cy="120" r="150" fill="${accent}" opacity=".18"/><circle cx="150" cy="540" r="190" fill="${accent}" opacity=".12"/><text x="64" y="110" fill="${accent}" font-family="sans-serif" font-size="28" font-weight="700" letter-spacing="4">GAMEVERSE ORIGINAL</text><text x="64" y="360" fill="white" font-family="sans-serif" font-size="76" font-weight="800">${emoji}</text><text x="64" y="445" fill="white" font-family="sans-serif" font-size="42" font-weight="800">${title}</text><rect x="64" y="480" width="130" height="8" rx="4" fill="${accent}"/></svg>`
   return `data:image/svg+xml,${encodeURIComponent(svg)}`
 }
 
 export const localGames = [
+  {
+    id: 'original-snake',
+    title: 'Snake',
+    description: 'Guide the hungry snake, gobble apples, and see how long you can grow.',
+    howToPlayText: 'Use WASD or the arrow keys. Don’t hit the walls or your own tail.',
+    image: createArtwork('Snake', '#4ade80', '🐍'),
+    type: 'snake',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-2048',
+    title: '2048',
+    description: 'Slide and combine matching number tiles to reach 2048.',
+    howToPlayText: 'Use the arrow keys to slide every tile. Matching numbers merge together.',
+    image: createArtwork('2048', '#fbbf24', '🔢'),
+    type: '2048',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-tic-tac-toe',
+    title: 'Tic-Tac-Toe',
+    description: 'Can you outsmart the computer and get three marks in a row?',
+    howToPlayText: 'You are X. Click a square to place your mark. Get three in a row to win.',
+    image: createArtwork('Tic-Tac-Toe', '#a78bfa', '✕'),
+    type: 'tic-tac-toe',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-simon-says',
+    title: 'Simon Says',
+    description: 'Watch the lights, remember the pattern, and repeat it back.',
+    howToPlayText: 'Watch the colored pads light up, then repeat the sequence in order.',
+    image: createArtwork('Simon Says', '#60a5fa', '◉'),
+    type: 'simon-says',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-whack-a-mole',
+    title: 'Whack-a-Mole',
+    description: 'The moles are popping up everywhere. How many can you catch?',
+    howToPlayText: 'Tap the mole whenever it appears. Catch as many as you can in 30 seconds.',
+    image: createArtwork('Whack-a-Mole', '#fb923c', '🐹'),
+    type: 'whack-a-mole',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-quick-math',
+    title: 'Quick Math',
+    description: 'Race the clock and solve as many number puzzles as you can.',
+    howToPlayText: 'Choose the right answer for each problem before the 30-second timer ends.',
+    image: createArtwork('Quick Math', '#38bdf8', '➗'),
+    type: 'quick-math',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-rock-paper-scissors',
+    title: 'Rock Paper Scissors',
+    description: 'Pick your move and challenge the computer to a best-of-five match.',
+    howToPlayText: 'Choose rock, paper, or scissors. First to five round wins takes the match.',
+    image: createArtwork('Rock Paper Scissors', '#f472b6', '✊'),
+    type: 'rock-paper-scissors',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-word-sprint',
+    title: 'Word Sprint',
+    description: 'Type each word as fast as you can before the timer runs out.',
+    howToPlayText: 'Type the displayed word and press Enter. Score as many words as possible in 30 seconds.',
+    image: createArtwork('Word Sprint', '#c084fc', 'Aa'),
+    type: 'word-sprint',
+    source: 'GameVerse Originals',
+  },
+  {
+    id: 'original-yellow-halls',
+    title: 'The Yellow Halls',
+    description: 'Find three keys in the maze and reach the exit before the tall one finds you.',
+    howToPlayText: 'WASD to move, left/right arrows to turn. Find all three keys and reach the exit.',
+    image: monsterMazeArtwork,
+    type: 'yellow-halls',
+    source: 'GameVerse Originals',
+  },
   {
     id: 'original-neon-dodge',
     title: 'Neon Dodge',
